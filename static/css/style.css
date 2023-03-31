@@ -1,0 +1,26 @@
+body {
+    background-color: #f8f8f8;
+    background-image: url('../img/xray.jpg');
+    background-repeat: repeat;
+    background-blend-mode: screen;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 46%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%);
+  z-index: -1;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin: auto;
+    margin-top: 50px; /* отступ сверху */
+    max-width: 800px; /* максимальная ширина контейнера */
+}

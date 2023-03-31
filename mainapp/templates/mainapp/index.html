@@ -11,3 +11,25 @@
 Проверить пневмонию с помощью CNN
 </body>
 </html>
+{% extends "mainapp/base.html" %}
+{% load static %}
+ {% block content %}
+    <div class="overlay xray"></div>
+    <div class="container">
+        <h1>Форма загрузки файла</h1>
+        <form action="{% url 'upload_file' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="file">Выберите файл:</label>
+                <input type="file" class="form-control-file" id="file" name="file">
+            </div>
+            <button type="submit" class="btn">Отправить</button>
+        </form>
+        {% if response %}
+            <div class="form-group">
+                <label for="response">Ответ сервера:</label>
+                <textarea class="form-control" id="response" name="response" rows="3" readonly>{{ answer }}</textarea>
+            </div>
+        {% endif %}
+    </div>
+ {% endblock %}

@@ -1,0 +1,12 @@
+{% extends "mainapp/base.html" %}
+{% load static %}
+ {% block content %}
+    <div class="overlay xray"></div>
+    <div class="container">
+            <div class="form-group">
+                <label for="response">Ответ сервера:</label>
+                <textarea class="form-control" id="response" name="response" rows="3" readonly>{{ answer }}</textarea>
+            </div>
+    </div>
+ {% endblock %}
+

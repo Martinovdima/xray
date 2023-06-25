@@ -1,13 +1,9 @@
 from django.shortcuts import render
-
-
-
 from .models import UploadedFile
 import tensorflow as tf
 import numpy as np
 from PIL import Image
 
-# Create your views here.
 
 def index(request):
     return render(request, 'mainapp/index.html')
@@ -15,6 +11,10 @@ def index(request):
 
 
 def upload_file(request):
+    """
+        param: upload files JPG
+        return: text answer
+    """
     if request.method == 'POST':
         print('Начало')
         uploaded_file = request.FILES['file']
